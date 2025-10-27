@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.home,
+.login {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.login {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+/* FullCalendar header toolbar padding to move items away from window edges */
+.fc .fc-header-toolbar {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (min-width: 1024px) {
+  .fc .fc-header-toolbar {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+/* Make header toolbar buttons blue */
+.fc .fc-toolbar-chunk .fc-button {
+  background-color: #007bff; /* Bootstrap primary blue */
+  color: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.fc .fc-button:hover,
+.fc .fc-button:focus {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+/* Make the date numbers (day grid) black */
+.fc .fc-daygrid-day-number {
+  color: #000;
+}
+
+/* Also ensure timegrid's hour labels and day headers are dark */
+.fc .fc-timegrid-slot-label,
+.fc .fc-col-header-cell-cushion {
+  color: #000;
+}
+
+/* Remove underlines from weekday headers and day numbers */
+.fc .fc-col-header-cell-cushion,
+.fc .fc-daygrid-day-number,
+.fc .fc-daygrid-day-top a,
+.fc .fc-daygrid-day-number a,
+.fc .fc-col-header-cell a {
+  text-decoration: none !important;
+}
