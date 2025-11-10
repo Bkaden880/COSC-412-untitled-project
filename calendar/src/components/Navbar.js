@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
-import { Button } from './Button'
 import './Navbar.css'
 
 function Navbar() {
@@ -38,12 +37,12 @@ function Navbar() {
                     </Link>
                 </li>
                 <li className='nav-item'>
-                    <Link to='/Login-Signup' className='nav-links-mobile' onClick={()=> setClick(false)}>
+                    <Link to='/Login-Signup' className='nav-links' onClick={()=> setClick(false)}>
                         Login
                     </Link>
                 </li>
+                {/* (removed duplicate mobile-only Login entry) */}
             </ul>
-            {button && <Button buttonstyle='btn--outline'>Login</Button>}
         </div>
     </nav>
   )

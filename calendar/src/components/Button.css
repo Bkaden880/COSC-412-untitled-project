@@ -27,6 +27,12 @@
     transition: all 0.3s ease-out;
 }
 
+/* hover state for outline buttons */
+.btn--outline:hover {
+    background: #fff;
+    color: #242424;
+}
+
 .btn--medium {
     padding: 8px 20px;
     font-size: 20px;

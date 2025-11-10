@@ -18,6 +18,7 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
+        <Route path='/' element={<Home />} />
         <Route path='/My-Calendar' element={<MyCalendar />} />
         <Route path='/Login-Signup' element={<LoginSignup/>} />
       </Routes>
