@@ -1,6 +1,7 @@
 import './App.css';
 import MyCalendar from './components/MyCalendar';
 import Navbar from './components/Navbar';
+import LoginSignup from './components/pages/Login-Signup/LoginSignup';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function Home() {
@@ -17,8 +18,8 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path='/' element={<Home />} />
         <Route path='/My-Calendar' element={<MyCalendar />} />
+        <Route path='/Login-Signup' element={<LoginSignup/>} />
       </Routes>
     </Router>
   );

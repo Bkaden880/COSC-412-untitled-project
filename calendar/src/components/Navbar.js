@@ -38,12 +38,12 @@ function Navbar() {
                     </Link>
                 </li>
                 <li className='nav-item'>
-                    <Link to='/Sign-Up' className='nav-links-mobile' onClick={()=> setClick(false)}>
-                        Sign Up
+                    <Link to='/Login-Signup' className='nav-links-mobile' onClick={()=> setClick(false)}>
+                        Login
                     </Link>
                 </li>
             </ul>
-            {button && <Button buttonstyle='btn--outline'>Sign Up</Button>}
+            {button && <Button buttonstyle='btn--outline'>Login</Button>}
         </div>
     </nav>
   )
