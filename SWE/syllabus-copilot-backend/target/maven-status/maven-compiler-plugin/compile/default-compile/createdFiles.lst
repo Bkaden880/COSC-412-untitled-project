@@ -1,0 +1,12 @@
+com\syllabus\copilot\backend\model\Assignment.class
+com\syllabus\copilot\backend\model\Exam.class
+com\syllabus\copilot\backend\controller\SyllabusController$ErrorResponse.class
+com\syllabus\copilot\backend\model\StudySession.class
+com\syllabus\copilot\backend\service\SyllabusService.class
+com\syllabus\copilot\backend\model\ImportantDate.class
+com\syllabus\copilot\backend\repository\SyllabusRepository.class
+com\syllabus\copilot\backend\controller\SyllabusController.class
+com\syllabus\copilot\backend\model\ProcessingStatus.class
+com\syllabus\copilot\backend\model\Syllabus.class
+com\syllabus\copilot\backend\SyllabusCopilotBackendApplication.class
+com\syllabus\copilot\backend\model\StudyPlan.class
