@@ -41,7 +41,6 @@ function Navbar() {
                         Login
                     </Link>
                 </li>
-                {/* (removed duplicate mobile-only Login entry) */}
             </ul>
         </div>
     </nav>

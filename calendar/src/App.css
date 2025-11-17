@@ -30,7 +30,6 @@
 .fc .fc-toolbar-chunk .fc-button {
   background-color: #007bff; /* Bootstrap primary blue */
   color: #fff;
-  border: 1px solid rgba(0,0,0,0.08);
 }
 
 .fc .fc-button:hover,
