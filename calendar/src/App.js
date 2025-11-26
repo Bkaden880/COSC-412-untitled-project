@@ -1,28 +1,31 @@
 import './App.css';
-import MyCalendar from './components/MyCalendar';
+import MyCalendar from './components/pages/Calendar/MyCalendar';
 import Navbar from './components/Navbar';
 import LoginSignup from './components/pages/Login-Signup/LoginSignup';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import SyllabusUpload from './components/pages/Syllabus/SyllabusUpload';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { AuthProvider, AuthContext } from './context/AuthContext';
+import { useContext } from 'react';
 
-function Home() {
-  return (
-    <div style={{ padding: 20 }}>
-      <h2>Welcome</h2>
-      <p>Use the navigation to open your calendar.</p>
-    </div>
-  );
-}
+const ProtectedRoute = ({ element }) => {
+  const { user, loading } = useContext(AuthContext);
+  if (loading) return <div>Loading...</div>;
+  return user ? element : <Navigate to="/Login-Signup" />;
+};
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/My-Calendar' element={<MyCalendar />} />
-        <Route path='/Login-Signup' element={<LoginSignup/>} />
-      </Routes>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Navigate to="/Login-Signup" />} />
+          <Route path='/My-Calendar' element={<ProtectedRoute element={<MyCalendar />} />} />
+          <Route path='/Login-Signup' element={<LoginSignup/>} />
+          <Route path='/Syllabus-Upload' element={<ProtectedRoute element={<SyllabusUpload/>} />} />
+        </Routes>
+      </Router>
+    </AuthProvider>
   );
 }
 

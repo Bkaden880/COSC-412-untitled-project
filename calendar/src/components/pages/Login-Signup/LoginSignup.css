@@ -97,3 +97,36 @@
     background-color: gray;
 }
 
+.error-message {
+    color: #d32f2f;
+    font-size: 14px;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin: 20px auto 0;
+}
+
+.submit-btn:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.submit-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+

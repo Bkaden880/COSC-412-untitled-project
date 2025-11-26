@@ -1,0 +1,31 @@
+.syllabus-container {
+  max-width: 820px;
+  margin: 24px auto;
+  padding: 18px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+.upload-form .form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.upload-form label {
+  font-weight: 600;
+}
+
+.form-actions { margin-top: 8px; }
+
+.upload-error { margin-top: 12px; color: #b00020; font-weight: 600; }
+
+.upload-result { margin-top: 16px; padding: 12px; border-radius: 6px; background: #f7f9fc; }
+.upload-result .summary { white-space: pre-wrap; background: #fff; padding: 8px; border-radius: 4px; border: 1px solid #e6eef9; }
+
+@media (max-width: 640px) {
+  .syllabus-container { margin: 12px; padding: 14px; }
+}
